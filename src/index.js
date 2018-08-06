@@ -42,11 +42,7 @@ export default {
 }
 
 function init (config, watch, options) {
-  const keycloak = Keycloak({
-    'realm': config['authRealm'],
-    'url': config['authUrl'],
-    'clientId': config['authClientId']
-  })
+  const keycloak = Keycloak(config['KEYCLOAK'])
 
   watch.$once('ready', function (cb) {
     cb && cb()
