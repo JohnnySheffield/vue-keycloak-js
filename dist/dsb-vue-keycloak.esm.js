@@ -1330,7 +1330,7 @@ var index = {
 };
 
 function init(config, watch, options) {
-  var keycloak$$1 = keycloak(config['KEYCLOAK']);
+  var keycloak$$1 = keycloak(config);
 
   watch.$once('ready', function (cb) {
     cb && cb();
